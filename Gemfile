@@ -47,8 +47,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave'
 # For image resizing
 gem 'mini_magick'
-# For images in production
-gem 'fog-aws'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -78,6 +76,8 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  # For images in production
+  gem 'fog'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
