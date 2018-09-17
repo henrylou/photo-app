@@ -8,9 +8,11 @@ gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'devise'
+# gem 'bootstrap', '~> 4.1.3'
 gem 'twitter-bootstrap-rails'
-gem 'devise-bootstrap-views'
-gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'devise-i18n'
+gem 'devise-bootstrap-views', '~> 1.0'
+# gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'sendgrid-ruby'
 gem 'stripe'
@@ -47,6 +49,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave'
 # For image resizing
 gem 'mini_magick'
+# For frontend styling
+gem 'therubyracer'
+gem 'less-rails-bootstrap'
+gem "font-awesome-rails"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
