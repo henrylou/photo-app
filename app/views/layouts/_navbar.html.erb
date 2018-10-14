@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>     
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item"><%= link_to "All", images_path, class: 'nav-link nav-item'%></li>
+          <li class="nav-item"><%= link_to "New", new_image_path, class: 'nav-link nav-item js-scroll-trigger' %></li>
+        <% else %>      
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        <% end %>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item">                 
+            <%= link_to ('<span style="white-space: nowrap"><i class="fa fa-user"></i></span>' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger', method: :delete) %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link nav-item js-scroll-trigger' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_user_session_path, class: 'nav-link nav-item js-scroll-trigger' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

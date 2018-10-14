@@ -1,28 +1,104 @@
-<% if current_user %>
-   <div class="jumbotron">
-    <h2 align="center">Welcome <%= current_user.email %></h2>
-    <p align="center">
-      Start managing your Photos with our application!
-    </p>
-  </div>
-
-<% else %>
-  <div class="jumbotron">
-    <h2 align="Center">Welcome to ePhoto</h2>
-    <p align="Center">
-      You'll love managing your Photos with ePhoto
-    </p>
-  </div>
-
-  <div class="row">
-    <div class="plans clearfix">
-      <!-- <div class="col-lg-3 col-lg-offset-3 plan"> -->
-      <div align="center">  
-        <p>
-          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
-          <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary sign-up' %>
-        </p>
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="my-auto col">
+        <div class="header-content mx-auto">
+          <h1 class="mb-5 text-center">Instagram</h1>
+          <!-- <a href="#download" class="btn btn-outline btn-xl">Start Now for Free!</a> -->
+          <div class="text-center">
+            <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-outline btn-lg' %>
+            <%= link_to 'Log In', new_user_session_path, class: 'btn btn-outline btn-lg' %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-<% end %>
+</header>
+
+<section class="download bg-primary text-center" id="download">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2 class="section-heading">About</h2>
+        <p>Instagtam clone is a web app that ...</p>
+        <div class="badges">
+          <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+          <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Unlimited Features, Unlimited Fun</h2>
+      <p class="text-muted">Check out what you can do with out app!</p>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 my-auto">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-screen-smartphone text-primary"></i>
+                <h3>Device Mockups</h3>
+                <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-camera text-primary"></i>
+                <h3>Flexible Use</h3>
+                <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-present text-primary"></i>
+                <h3>Free to Use</h3>
+                <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-lock-open text-primary"></i>
+                <h3>Open Source</h3>
+                <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact bg-primary" id="contact">
+  <div class="container">
+    <h2>We
+      <i class="fas fa-heart"></i>
+      new friends!</h2>
+    <ul class="list-inline list-social">
+      <li class="list-inline-item social-twitter">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item social-facebook">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="list-inline-item social-google-plus">
+        <a href="#">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
