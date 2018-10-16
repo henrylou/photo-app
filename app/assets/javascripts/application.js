@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require turbolinks
 //= require_tree .
 //= require jquery3
 //= require popper
@@ -19,7 +20,7 @@
 //= require jquery.easing
 //= require_tree .
 
-$(document).ready(function() { 
+(function() { 
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
