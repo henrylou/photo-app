@@ -1,5 +1,18 @@
-<%- model_class = Image -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+<div class="custom-bg">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <h2 class="text-center mb-4">Bootstrap 4 Login Form</h2> -->
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <%- model_class = Image -%>
+            <div class="text-center">
+              <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+            </div>
+            <%= render :partial => 'form' %>
+          </div>
+        </div> <!--/row-->
+      </div> <!--/col-->
+    </div> <!--/row-->
+  </div> <!--/container-->
 </div>
-<%= render :partial => 'form' %>

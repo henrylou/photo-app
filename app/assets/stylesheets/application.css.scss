@@ -52,6 +52,22 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
+
+.custom-bg2 {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
+  background: linear-gradient(to left, #ffffff, $theme-tertiary);  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+
 body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
